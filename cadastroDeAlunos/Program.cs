@@ -6,7 +6,8 @@ namespace cadastroDeAlunos
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Bem-vindo ao Sistema escolar.");
+
         }
     }
 }
