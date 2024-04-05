@@ -6,9 +6,9 @@ namespace cadastroDeAlunos
 {
     public class Alunos
     {
-        private static int _id;
-        private int _index;
-        public int id
+        private static int id;
+        private int _id;
+        public int Id
         {
             get
                 {
@@ -25,14 +25,14 @@ namespace cadastroDeAlunos
         }
         public Alunos(string nome, string turma)
         {
-            _index++;
-            _id = _index;
+            id++;
+            _id = id;
             Nome = nome;
             Turma = turma;
         }
         public override string ToString()
         {
-            return ($"Id: {id} Nome do aluno: {Nome} \n turma: {Turma} \n");
+            return ($"Id: {_id} Nome do aluno: {Nome} \n turma: {Turma} \n");
         }
 
     }

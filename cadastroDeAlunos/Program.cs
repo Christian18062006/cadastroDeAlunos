@@ -36,6 +36,11 @@ namespace cadastroDeAlunos
                             Console.WriteLine(BancoAlunos.buscaAluno(indice));
                             break;
                         }
+                    case 3:
+                        {
+                            Console.WriteLine("Construindo.");
+                            break;
+                        } 
                     default:
                         {
                             Console.WriteLine("Opção inválida.");
