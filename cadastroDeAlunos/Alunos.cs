@@ -4,11 +4,11 @@ using System.Text;
 
 namespace cadastroDeAlunos
 {
-    class Alunos
+    public class Alunos
     {
         private static int _id;
-        private int _id;
-        public int id()
+        private int _index;
+        public int id
         {
             get
                 {
@@ -25,8 +25,8 @@ namespace cadastroDeAlunos
         }
         public Alunos(string nome, string turma)
         {
-            id++;
-            _id = id;
+            _index++;
+            _id = _index;
             Nome = nome;
             Turma = turma;
         }

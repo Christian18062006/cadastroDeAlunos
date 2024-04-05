@@ -11,11 +11,11 @@ namespace cadastroDeAlunos
         public static void adicionaAluno(Alunos aluno)
         {
             _estudantes[_index] = aluno;
-            _index++
+            _index++;
         }
         public static Alunos buscaAluno(int indice)
         {
-            return (_estudantes[indice);
+            return (_estudantes[indice]);
         }
     }
 }
