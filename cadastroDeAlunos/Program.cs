@@ -13,7 +13,7 @@ namespace cadastroDeAlunos
             Console.WriteLine("Bem-vindo ao Sistema escolar.");
             while(true)
             {
-                Console.WriteLine("Digite a sua opção \n 1: adicionar um novo aluno. \n 2: buscar um aluno por índice. \n 3: listar todos os alunos cadastrados.");
+                Console.WriteLine("Digite a sua opção \n 1: adicionar um novo aluno. \n 2: buscar um aluno por índice. \n 3: listar todos os alunos cadastrados. \n 4 sair.");
                 opcao = int.Parse(Console.ReadLine());
                 switch(opcao)
                 {
@@ -23,8 +23,14 @@ namespace cadastroDeAlunos
                             nome = Console.ReadLine();
                             Console.WriteLine("Digite a turma do aluno.");
                             turma = Console.ReadLine();
+                            if (turma=="" || nome=="")
+                            {
+                                Console.WriteLine("Aluno não pode ser cadastrado, cheque as informações, e tente novamente.");
+                                break;
+                            }
+
                             estudante = new Alunos(nome, turma);
-                            BancoAlunos.adicionaAluno(estudante);
+BancoAlunos.adicionaAluno(estudante);
                             Console.WriteLine("Aluno cadastrado.");
                             break;
                         }
@@ -38,9 +44,18 @@ namespace cadastroDeAlunos
                         }
                     case 3:
                         {
-                            Console.WriteLine("Construindo.");
+                            for (int i=0; i<BancoAlunos.getQuantidade(); i++)
+                            {
+                                Alunos aluno = BancoAlunos.buscaAluno(i);
+                                Console.WriteLine(aluno);
+                            }
                             break;
-                        } 
+                        }
+                    case 4:
+                        {
+                            Console.WriteLine("obrigado por usar o nosso sistema escolar!");
+                            return;
+                        }
                     default:
                         {
                             Console.WriteLine("Opção inválida.");

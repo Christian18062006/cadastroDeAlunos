@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
 
 namespace cadastroDeAlunos
 {
@@ -16,6 +14,10 @@ namespace cadastroDeAlunos
         public static Alunos buscaAluno(int indice)
         {
             return (_estudantes[indice]);
+        }
+        public static int getQuantidade()
+        {
+            return (_index);
         }
     }
 }
